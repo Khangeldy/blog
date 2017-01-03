@@ -3,45 +3,313 @@
   src: url("fonts/din.otf") format("opentype");
   font-weight: normal;
 }
+@charset "UTF-8";
 @font-face {
-  font-family: iconfont;
-  src: url("fonts/iconfont/iconfont.eot?t=1476587789");
-  src: url("fonts/iconfont/iconfont.eot?t=1476587789#iefix") format('embedded-opentype'), url("fonts/iconfont/iconfont.woff?t=1476587789") format('woff'), url("fonts/iconfont/iconfont.ttf?t=1476587789") format('truetype'), url("fonts/iconfont/iconfont.svg?t=1476587789#iconfont") format('svg');
-}
-.iconfont {
-  font-family: iconfont !important;
-  font-size: 16px;
+  font-family: "khangeldy";
+  src: url("fonts/khangeldy/fonts/khangeldy.eot");
+  src: url("fonts/khangeldy/fonts/khangeldy.eot?#iefix") format("embedded-opentype"), url("fonts/khangeldy/fonts/khangeldy.woff") format("woff"), url("fonts/khangeldy/fonts/khangeldy.ttf") format("truetype"), url("fonts/khangeldy/fonts/khangeldy.svg#khangeldy") format("svg");
+  font-weight: normal;
   font-style: normal;
+}
+[data-icon]:before {
+  font-family: "khangeldy" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-twitter:before {
-  content: "\e600";
+[class^="khan-"]:before,
+[class*=" khan-"]:before {
+  font-family: "khangeldy" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.icon-github:before {
-  content: "\ee2c";
+.khan-iconfont:before {
+  content: "\62";
 }
-.icon-next:before {
-  content: "\e619";
+.khan-arrow-circle-right:before {
+  content: "\61";
 }
-.icon-douban:before {
-  content: "\e680";
+.khan-arrow-circle-up:before {
+  content: "\63";
 }
-.icon-icon:before {
-  content: "\e610";
+.khan-arrow-circle-down:before {
+  content: "\64";
 }
-.icon-search:before {
-  content: "\348d";
+.khan-arrow-circle-left:before {
+  content: "\65";
 }
-.icon-weixin:before {
-  content: "\e60d";
+.khan-angellist:before {
+  content: "\66";
 }
-.icon-weibo:before {
-  content: "\e647";
+.khan-angle-double-down:before {
+  content: "\67";
 }
-.icon-zhihu:before {
-  content: "\e63f";
+.khan-angle-down:before {
+  content: "\68";
+}
+.khan-angle-left:before {
+  content: "\69";
+}
+.khan-angle-right:before {
+  content: "\6a";
+}
+.khan-angle-up:before {
+  content: "\6b";
+}
+.khan-chain-broken:before {
+  content: "\6c";
+}
+.khan-check-circle:before {
+  content: "\6d";
+}
+.khan-codepen:before {
+  content: "\6e";
+}
+.khan-code-fork:before {
+  content: "\6f";
+}
+.khan-code:before {
+  content: "\70";
+}
+.khan-cloud-download:before {
+  content: "\71";
+}
+.khan-cloud-upload:before {
+  content: "\72";
+}
+.khan-compress:before {
+  content: "\73";
+}
+.khan-database:before {
+  content: "\74";
+}
+.khan-diamond:before {
+  content: "\75";
+}
+.khan-css3:before {
+  content: "\76";
+}
+.khan-dribbble:before {
+  content: "\77";
+}
+.khan-envelope:before {
+  content: "\78";
+}
+.khan-expand:before {
+  content: "\79";
+}
+.khan-facebook-square:before {
+  content: "\7a";
+}
+.khan-facebook:before {
+  content: "\41";
+}
+.khan-flask:before {
+  content: "\42";
+}
+.khan-frown-o:before {
+  content: "\43";
+}
+.khan-github:before {
+  content: "\45";
+}
+.khan-github-alt:before {
+  content: "\44";
+}
+.khan-gratipay:before {
+  content: "\46";
+}
+.khan-hand-peace-o:before {
+  content: "\47";
+}
+.khan-heart:before {
+  content: "\48";
+}
+.khan-heart-o:before {
+  content: "\49";
+}
+.khan-html5:before {
+  content: "\4a";
+}
+.khan-info-circle:before {
+  content: "\4b";
+}
+.khan-instagram:before {
+  content: "\4c";
+}
+.khan-link:before {
+  content: "\4d";
+}
+.khan-linux:before {
+  content: "\4e";
+}
+.khan-map-marker:before {
+  content: "\4f";
+}
+.khan-mars:before {
+  content: "\50";
+}
+.khan-mercury:before {
+  content: "\52";
+}
+.khan-microphone-slash:before {
+  content: "\53";
+}
+.khan-microphone:before {
+  content: "\54";
+}
+.khan-mars-stroke:before {
+  content: "\51";
+}
+.khan-paper-plane:before {
+  content: "\55";
+}
+.khan-paperclip:before {
+  content: "\56";
+}
+.khan-paragraph:before {
+  content: "\57";
+}
+.khan-paw:before {
+  content: "\58";
+}
+.khan-paypal:before {
+  content: "\59";
+}
+.khan-share-alt:before {
+  content: "\5a";
+}
+.khan-search-plus:before {
+  content: "\30";
+}
+.khan-search-minus:before {
+  content: "\31";
+}
+.khan-share-alt-square:before {
+  content: "\32";
+}
+.khan-skype:before {
+  content: "\33";
+}
+.khan-slack:before {
+  content: "\34";
+}
+.khan-soundcloud:before {
+  content: "\35";
+}
+.khan-star:before {
+  content: "\36";
+}
+.khan-stack-overflow:before {
+  content: "\37";
+}
+.khan-steam-square:before {
+  content: "\38";
+}
+.khan-tags:before {
+  content: "\39";
+}
+.khan-tag:before {
+  content: "\21";
+}
+.khan-terminal:before {
+  content: "\22";
+}
+.khan-thumbs-o-up:before {
+  content: "\23";
+}
+.khan-thumbs-up:before {
+  content: "\24";
+}
+.khan-trello:before {
+  content: "\25";
+}
+.khan-trash-o:before {
+  content: "\26";
+}
+.khan-tree:before {
+  content: "\27";
+}
+.khan-tumblr:before {
+  content: "\28";
+}
+.khan-twitch:before {
+  content: "\29";
+}
+.khan-twitter:before {
+  content: "\2a";
+}
+.khan-twitter-square:before {
+  content: "\2b";
+}
+.khan-venus:before {
+  content: "\2c";
+}
+.khan-vimeo:before {
+  content: "\2d";
+}
+.khan-vk:before {
+  content: "\2e";
+}
+.khan-whatsapp:before {
+  content: "\2f";
+}
+.khan-wifi:before {
+  content: "\3a";
+}
+.khan-windows:before {
+  content: "\3b";
+}
+.khan-wordpress:before {
+  content: "\3c";
+}
+.khan-youtube-play:before {
+  content: "\3d";
+}
+.khan-gift:before {
+  content: "\3e";
+}
+.khan-bubble-comment-streamline-talk:before {
+  content: "\3f";
+}
+.khan-database-streamline:before {
+  content: "\40";
+}
+.khan-burst-new:before {
+  content: "\5b";
+}
+.khan-check:before {
+  content: "\5d";
+}
+.khan-iconfont-1:before {
+  content: "\5e";
+}
+.khan-iconfont-2:before {
+  content: "\5f";
+}
+.khan-iconfont-3:before {
+  content: "\60";
+}
+.khan-iconfont-4:before {
+  content: "\7b";
+}
+.khan-iconfont-5:before {
+  content: "\7c";
+}
+.khan-iconfont-6:before {
+  content: "\7d";
 }
 * {
   margin: 0;
@@ -1156,7 +1424,7 @@ a[data-tooltip][data-placement="top"]::after {
   display: inline-block;
 }
 .author-contact ul li i {
-  font-size: 35px;
+  font-size: 23px;
   color: #888;
   margin: 0 5px;
 }
