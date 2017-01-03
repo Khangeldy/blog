@@ -1,6 +1,11 @@
 @font-face {
-  font-family: "din";
-  src: url("fonts/din.otf") format("opentype");
+  font-family: "PT Sans";
+  src: url("fonts/PT_Sans-Web-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/PT_Sans-Web-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 @charset "UTF-8";
@@ -338,7 +343,7 @@ html {
   -moz-box-sizing: border-box;
 }
 body {
-  font-family: din, 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
+  font-family: 'PT Sans', 'Hiragino Sans GB', 'Microsoft Yahei', Arial, sans-serif;
   font-size: 16px;
   background-color: #fff;
 }
