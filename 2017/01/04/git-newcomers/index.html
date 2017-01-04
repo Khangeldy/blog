@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Git. Нарутоның ниндзюцуін үйренеміз | Khangeldy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+      <link rel="icon" href="/blog/favicon3.png">
+    
+
+    <link rel="stylesheet" href="/blog/css/style.css">
+
+    <link rel="stylesheet" href="/blog/js/google-code-prettify/tranquil-heart.css">
+
+  </head>
+
+  <body>
+
+<header>
+	<a id="logo" href="/blog" title="Khangeldy">
+	<img src="/blog/favicon3.png" alt="Khangeldy"></a>
+
+	
+		<!--搜索栏-->
+		<i class="js-toggle-search icon khan-iconfont-5"></i>
+
+
+<form class="js-search search-form search-form--modal" method="get" action="http://gushi.li" role="search">
+	<div class="search-form__inner">
+		<div>
+			<i class="icon khan-iconfont-5"></i>
+			<input class="text-input" placeholder="іздеу қажет..." type="search">
+		</div>
+	</div>
+</form>
+
+	
+
+	
+		<!--侧边导航栏-->
+		<a id="nav-toggle" href="#"><span></span></a>
+
+<nav>
+	<div class="menu-top-container">
+		<ul id="menu-top" class="menu">
+			
+				
+				<li class="current-menu-item">
+					<a href="http://khangeldy.github.io" target="_blank">Порфолио</a>
+				</li>
+			
+		</ul>
+	</div>
+</nav>
+	
+
+</header>
+
+<div class="m-header ">
+	<section id="hero1" class="hero">
+		<div class="inner">
+		</div>
+	</section>
+	
+		<figure class="top-image" style='background-image: url(/blog/images/post-banner/atlassian-getting-git-right.jpg)' data-enable=false></figure>
+	
+</div>
+
+<!--文章列表-->
+<div class="wrapper">
+  
+    <!--文章-->
+<article>
+	
+  
+    <h1 class="post-title" itemprop="name">
+      Git. Нарутоның ниндзюцуін үйренеміз
+    </h1>
+  
+
+	<div class='post-body mb'>
+		<h2 id="БАРЛЫҚТАРЫҢА-САЛАМ"><a href="#БАРЛЫҚТАРЫҢА-САЛАМ" class="headerlink" title="БАРЛЫҚТАРЫҢА САЛАМ!"></a>БАРЛЫҚТАРЫҢА САЛАМ!</h2><p>Осы мақаланы жазуыма себепкер Даулет деген досым. Салам Даулет!</p>
+<blockquote>
+<p>Git-тың толық мүмкіншіліктерін бір мақалада жазып шығу қиын екен.Сол себепті осы мақаладан кейін тағы ізденіс жасауларыңызды сұраймын.</p>
+</blockquote>
+<h3 id="АЛ-ПІСМІЛӘ-КЕТТІК"><a href="#АЛ-ПІСМІЛӘ-КЕТТІК" class="headerlink" title="АЛ ПІСМІЛӘ КЕТТІК!"></a>АЛ ПІСМІЛӘ КЕТТІК!</h3><p>Git — жайлы wiki не дейді. Соны айтайын: <a href="https://kk.wikipedia.org/wiki/Git" target="_blank" rel="external">Git</a> — Кең таралған файлдарды версиялау жүйесі. Атақты <a href="https://kk.wikipedia.org/wiki/%D0%9B%D0%B8%D0%BD%D1%83%D1%81_%D0%A2%D0%BE%D1%80%D0%B2%D0%B0%D0%BB%D0%B4%D1%81" target="_blank" rel="external">Линус Торвальдсдің</a> аттас проекті Linux ядросын бірлесіп жұмыс істеуіне, өте қажетті құрал ретінде жасалды. Басында Linux ядросы Bitkeeper атты версияларды бақылау жүйесін тегін қолданып жүрген. Уақыт өте кейін Линус Торвальдс олармен сөзге келіп қалғандықтан, халяваға(жаргон үшін кешірім сұраймын) жол кесілді.Міне аяғы Git- жеке проект ретінде бөлініп шығуына алып келді. Айтпақшы кең таралған деген сөз тура мағынада емес. Ол жұмыс істеу принціпіне қарай байланысты аталған. Толығырақ googleден білуге болады.</p>
+<h3 id="ОЛ-МАҒАН-НЕ-ҮШІН-КЕРЕК"><a href="#ОЛ-МАҒАН-НЕ-ҮШІН-КЕРЕК" class="headerlink" title="ОЛ МАҒАН НЕ ҮШІН КЕРЕК?"></a>ОЛ МАҒАН НЕ ҮШІН КЕРЕК?</h3><p>Мысал ретінде Наруто анимесіндегі басты кейіпкердің техникасын алып қарайықшы.Міне мультфильм көргенің пайдасы бар екен, ата-аналарыңа барып айтсаңдар болады. Ол техникасының жұмыс істеу принціпін еске түсірейік: Наруто өз көшірмесін жасайды да, оны басқа бір шаруаға жұмсайды. Қазірше Нарутоның көшірмесін branched — деп атайық, ал нағыз Нарутоны — master деп атасақ дұрыс болар.Сол Наруто(branched) -&gt; Наруто(Master)дан едәуір алыс қашықтықта тұр. Наруто мультфильмінде мұндай кезде, Наруто(branched) саусақтарын біріктіп, ниндзюцу техникасын жасайтын да, керек ақпарат Наруто(master)-ге барып жететін. Сол техниканың сыры ашылды. Наруто git-ті қолданатын болып шықты. Бұл енді менің ойымнан шыққан фантазия, сонда да бұл сендерге ақпаратты жақсы ұғынуға көмектеседі деп ойлаймын.Gitтің жұмыс істеу принціпі осыған ұқсас.Уақытың тапшылығына байланысты, қалай тез бастауды үйретейін…</p>
+<h3 id="БАСТЫСЫ-ПРАКТИКА"><a href="#БАСТЫСЫ-ПРАКТИКА" class="headerlink" title="БАСТЫСЫ ПРАКТИКА"></a>БАСТЫСЫ ПРАКТИКА</h3><p>Алдымен бізге бағдарламасын жүктеп алу керек. Оны бағдарламашылар тілінде клиент деп атаймыз.Клиенттердің түрлері, санаттары көп.Бірінші санатта GUI — деген (барлығы әдемі терезеде, меню мен батырмалары бар кәдімгі бағдарлама). Екінші санатта консольді бағдарламалар. Дәл осы консоль арқылы қолдану біздің бүгінгі үйренетін сабағымыз.Қалай ОЖ-ге орнату, әр қолданушылардың операциялық жүйесіне байланысты болған соң, бұл қадамды әр оқырман өзі шешу қажет. Youtube сізге көмекке!<br>Мынау <a href="https://git-scm.com/" target="_blank" rel="external">Жүктеу сілтемесі</a>.</p>
+<p>Git bash бағдарламасын ашып</p>
+<pre><code class="bash">mkdir -p Documents/my-first-git &amp;&amp; cd Documents/my-first-git
+</code></pre>
+<p>тереміз. Бұл код документы папкасын ашып, my-first-git папкасын құрып, сол папканы ашады.</p>
+<p>Жаңа проект жасау керек болса?</p>
+<pre><code class="bash">git init
+</code></pre>
+<p>Егер дайын проектіні көшіру керек болса?</p>
+<pre><code class="bash">git clone &lt;репозиторий сілтемесі&gt; [&lt;папканың аты&gt;]
+</code></pre>
+<p>Енді бізге кез-келген файл керек.</p>
+<pre><code class="bash">echo &#39;#Salem git learners&#39; &gt; hello.md
+</code></pre>
+<p>Қазір директорияда тұрған қарапайым файл(unstaged). Бұл файлды индексация жасауым керек.Сол кезде ол файл git-тің қолдану аясына(staged area) кіреді.</p>
+<pre><code class="bash">git add --all
+git status
+</code></pre>
+<p>Егер бір ғана файлды қосқыңыз келсе.</p>
+<pre><code class="bash">git add hello.md
+</code></pre>
+<p>Енді қосылған файлдарды snapshot-қа қосу керек. Snapshot деген кезең деген сөз. Кейін біз сол кезеңдер арқылы бұрынғы қалпын қайта келтіре аламыз. Мұнда біз сommit -m кезеңге ат беріп оны репозитори тарихына жазамыз. Егер сіз staged area-ға файлдарды қосып commit жасамасаңыз сіз жасаған өзгерістер сақталмайды.</p>
+<pre><code class="bash">git commit -m &quot;initial commit&quot;
+</code></pre>
+<p>Бізде енді локально репозиторий жасадық. Енді ол репозиториді удаленный репозиториға мысалы githubқа көшіру қажет. Сол кезде ол барлық командаластырыңызға қол жетімді болмақ.Тек сіз енді Github тан аккаунт ашып, сол жерде жаңа репозиторий жасауыңыз керек. Сол кезде сізде осындай экран шығады.</p>
+<p><img src="http://codeo.kz/uploads/images/00/04/08/2016/11/03/013705.png" alt="github registration"></p>
+<p>Суретте көрсетілгендей екінші вариантты таңдаймыз. Бірінші жол біздің локальді репозиториымызды удаленно орналасқан репозиторимен байланыстырады. Екінші жолда біз кезеңделген commitмізді удаленный репозиториға жібереміз де, сол жерде сақтаймыз. Егер сізден Github аккаунтіңіз бен парольіңізді сұраса таң қалмаңыз.</p>
+<p>Егер барлығы жақсы болса git status-ты тергенде — Your branch is up to date деген сөз экранда болу керек. Енді басқа папканы ашамыз.</p>
+<pre><code class="bash">cd ..
+mkdir second-repo
+cd second-repo
+</code></pre>
+<p>Clone яғни көшірмесін жасаймыз</p>
+<pre><code class="bash">git clone https://github.com/Khangeldy/codeo-tutorial.git
+cd codeo-tutorial
+</code></pre>
+<p>Сол клондалған папкаға көшуді ұмытпаңдар. Git status пен тексереміз. Сосын жаңа файл жасаймыз.Cat командасы терминал экранына файлдың мазмұнын шығарып береді. Echo жаңа файлды біз берге текспен толтырып жаңа файл жасайды.</p>
+<pre><code class="bash">echo &#39;let git = &quot;men endi git bilemin&quot;;console.log(git);&#39; &gt; main.js
+</code></pre>
+<p>Ал енді басынан қайталаймыз тек осы директорияда.</p>
+<ol>
+<li>Staged Areaға қосамыз</li>
+<li>git commit арқылы коммит етеміз</li>
+<li>git push арқылы удаленный репозиториға жіберіміз</li>
+</ol>
+<p>Болған соң бірінші папкамызға қайтып ораламыз. Git pull жазамыз, сонда бізде main.js файлы githubтан көшіріліп келеді.</p>
+<pre><code class="bash">git pull
+ls
+</code></pre>
+<p>Болды git-пен жұмыс істеуді енді сіздерге бастап бердім. Ары қарай өз ниеттіріңе байланысты.</p>
+
+	</div>
+	<div class="meta split">
+		<time class="post-date" datetime="2017-01-04T10:57:35.000Z" itemprop="datePublished">2017-01-04</time>
+	</div>
+</article>
+
+<!--评论-->
+
+	<div id="disqus_thread"></div>
+<script type='text/javascript'>
+    /**
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//khangeldy-blog.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+
+
+
+  
+</div>
+
+
+  <svg id="bigTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
+    <path d="M0 0 L50 100 L100 0 Z"></path>
+  </svg>
+
+  
+
+
+  <div class="wrapper"></div>
+
+
+<div class="fat-footer">
+	<div class="wrapper">
+		<div class="layout layout--center">
+			<div class="layout__item palm-mb">
+				<div class="media">
+					<img class="headimg" src='/blog/images/ava2.jpg' alt='Khangeldy Ilebaev'>
+					<div class="media__body">
+						<h4>Khangeldy</h4>
+						<p class='site-description'>Менің мағынасы жоқ шимайларым. Бұл жерде мен өзімнің жазушылық шеберлігімді шыңдаймын</p>
+					</div>
+				</div>
+				<div class="author-contact">
+					<ul>
+						
+							
+							<li>
+				        		<a href="http://vk.com/mahabatuly" target="_blank">
+				        			
+				        				<i class="icon khan-vk"></i>
+				        			
+				        		</a>
+				        	</li>
+						
+							
+							<li>
+				        		<a href="https://github.com/khangeldy" target="_blank">
+				        			
+				        				<i class="icon khan-iconfont"></i>
+				        			
+				        		</a>
+				        	</li>
+						
+							
+							<li>
+				        		<a href="http://codepen.io/Khangeldy" target="_blank">
+				        			
+				        				<i class="icon khan-codepen"></i>
+				        			
+				        		</a>
+				        	</li>
+						
+							
+							<li>
+				        		<a href="https://www.instagram.com/khanemeswolf" target="_blank">
+				        			
+												<i class="icon khan-instagram"></i>
+											
+				        		</a>
+				        	</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<footer class="footer" role="contentinfo">
+	<div class="wrapper wrapper--wide split split--responsive">
+		<span>Theme by <a href="http://github.com/yumemor">Yumemor</a>. Powered by <a href="http://hexo.io">Hexo</a></span>
+	</div>
+</footer>
+
+	<!-－这里导入了 lib.js 里面涵盖了 jQuery 等框架 所以注释掉-->
+	<!--<script src="http://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>-->
+	<script src="/blog/js/lib.js"></script>
+	<script src="/blog/js/google-code-prettify/prettify.js"></script>
+	<script src="/blog/js/module.js"></script>
+	<script src="/blog/js/script.js"></script>
+	<script type='text/javascript'>
+		//代码高亮
+		$(document).ready(function(){
+	 		$('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+   			prettyPrint();
+		});
+	</script>
+	</body>
+</html>
