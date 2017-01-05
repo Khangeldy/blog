@@ -26,7 +26,7 @@
 
             $('.js-search .text-input').keydown(function (event) {
                 if (event.keyCode == 13) {
-                    location.href = 'https://www.google.com/search?q=site:yumemor.com ' + $(this).val();
+                    location.href = 'https://www.google.com/search?q=site:khangeldy.github.com/blog ' + $(this).val();
                     return false;
                 }
             })
@@ -88,7 +88,7 @@
 
         var bannerNode = $('.top-image');
         if(bannerNode.data('enable')){
-            var index = parseInt((Math.random() * 12) + 1);
+            var index = parseInt((Math.random() * 21) + 1);
             bannerNode.attr('style','background-image:url(/blog/banner/'+index+'.jpg)');
         }
     })
