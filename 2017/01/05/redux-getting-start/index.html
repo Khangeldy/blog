@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Redux жайлы қазақ тілінде бірінші мақала | Khangeldy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+      <link rel="icon" href="/blog/favicon3.png">
+    
+
+    <link rel="stylesheet" href="/blog/css/style.css">
+
+    <link rel="stylesheet" href="/blog/js/google-code-prettify/tranquil-heart.css">
+
+  </head>
+
+  <body>
+
+<header>
+	<a id="logo" href="/blog" title="Khangeldy">
+	<img src="/blog/favicon3.png" alt="Khangeldy"></a>
+
+	
+		<!--搜索栏-->
+		<i class="js-toggle-search icon khan-iconfont-5"></i>
+
+
+<form class="js-search search-form search-form--modal" method="get" action="http://gushi.li" role="search">
+	<div class="search-form__inner">
+		<div>
+			<i class="icon khan-iconfont-5"></i>
+			<input class="text-input" placeholder="іздеу қажет..." type="search">
+		</div>
+	</div>
+</form>
+
+	
+
+	
+		<!--侧边导航栏-->
+		<a id="nav-toggle" href="#"><span></span></a>
+
+<nav>
+	<div class="menu-top-container">
+		<ul id="menu-top" class="menu">
+			
+				
+				<li class="current-menu-item">
+					<a href="http://khangeldy.github.io" target="_blank">Порфолио</a>
+				</li>
+			
+		</ul>
+	</div>
+</nav>
+	
+
+</header>
+
+<div class="m-header ">
+	<section id="hero1" class="hero">
+		<div class="inner">
+		</div>
+	</section>
+	
+		<figure class="top-image" data-enable=true></figure>
+	
+</div>
+
+<!--文章列表-->
+<div class="wrapper">
+  
+    <!--文章-->
+<article>
+	
+  
+    <h1 class="post-title" itemprop="name">
+      Redux жайлы қазақ тілінде бірінші мақала
+    </h1>
+  
+
+	<div class='post-body mb'>
+		<blockquote>
+<p>Бұл мақала тек javascript тілін орташа деңгейде меңгерген оқырмандарға ғана арналған.</p>
+</blockquote>
+<p>Егер React жайлы білсең, онда Redux жайлы естіген шығарсың. React-та ешқандай модель, шаблон, контроллер деп ажырататын концепт жоқ. Ол тек компонентті принцип бойынша жұмыс істейді. Бүкіл код html, css, js бір файлда сақталады, оның ішінде модельде бар. Мұндай концепттің артықшылығы Reactқа  DOM-мен тез жұмыс істеуге мүмкіндік берсе. Кемшілігі қиын компонент жазған кезде, пайда болады. Ол кодты ары-қарай жазу тым қиын және оны түсіну де оңай емес. Дәл осы кезде сахнаға Redux шығады. Redux авторы <a href="https://twitter.com/dan_abramov" target="_blank" rel="external">Дэн Абрамов</a> өзіне шабыт берген <a href="https://facebook.github.io/flux/" target="_blank" rel="external">Flux</a> және <a href="http://elm-lang.org/" target="_blank" rel="external">ELM</a> екендігін жасырмай айтып, айтып тастаған.</p>
+<blockquote>
+<p>Elm жайлы қызық факт! Бұл интерфейстер жазуға арналған тіл. Осы тілде жазылған бағдарлама, production-ға шыққанда қателерді ешқашан тұдырмайды. Ал егер ошибка шағырса, онда ол сіздің қатеңіз емес, компилятордың қателігі болып шығады екен. Себебі Elm тілінде жазылған код, javascript кодға компиляциялаған кезде, қатал тексеріден өтеді.Уау!</p>
+</blockquote>
+<h3 id="Императивті-vs-Декларативті"><a href="#Императивті-vs-Декларативті" class="headerlink" title="Императивті vs Декларативті"></a>Императивті vs Декларативті</h3><p>Redux-ке шолуды бастамас үшін, алдымен сендерге функционалды бағдарламаудың не екендігін білу қажет. Айтпадым ба әлі? Кешірім сұраймын. Elm функционалды парадигманы ұстанатын  бірден бір тіл, осы бір мұрасын redux қанымен cіңірген.<br>Жалпы айтқанда бүкіл бағдарламалау тілдері императивті және декларативті болып бөлінеді.</p>
+<p>Олардың айырмашылығы мына қарапайым мысалда. Егер сізге компьютерге тамақ жасату керек болса. Императивті код былай болар еді:</p>
+<pre><code>(statement-1) Дүкенге барып, азық-түлік аласың.
+(statement-2) Көкеністерді тұрап, қазан жағасың.
+(statement-3) Қазанға май құйасың.
+...
+(statement-n) Тамақ піскенде мені оятасың.
+</code></pre><p>дегендей  тәртібі қатаң түрде белгіленген инструкциядан тұратын алгоритм сияқты.<br>Декларативте код болса әлде-қайда қысқа да нұсқа.</p>
+<pre><code>Қалай болса солай маған манты жасап бер. Компьютер ұқтың ба?
+</code></pre><p>дегендей. Яғни декларативті бағдарламалауда кодтың қалай жұмыс істегені маңызды емес. Бастысы нәтежие. Декларативті бағдарламалау тілдеріне <a href="https://kk.wikipedia.org/wiki/SQL" target="_blank" rel="external">SQL</a>, RegExp, функционалді және логикалық бағдарламалау тілдері жатады. Императивті тілдерге C++, Java, Php, Python, Ruby жатқызуға болады.<br>Бұл классификация жайлы толыққанды өзім де білмеймін.Сол себепті айып етпеңіздер.</p>
+<h3 id="Функциональді-бағдарламалау-Immutablity-Pure-functions"><a href="#Функциональді-бағдарламалау-Immutablity-Pure-functions" class="headerlink" title="Функциональді бағдарламалау. Immutablity, Pure functions"></a>Функциональді бағдарламалау. Immutablity, Pure functions</h3><p>Егер қазірден бастап бастарың қатып, менің мақалам сізге физика, химия сабағына ұқсап бара жатса. Тупо зуылдатып оқып шығыңдар. Себебі бүгін болмаса ертең бастарыңа жетеді, бұл ақпарат - “бомба замедленного действия”. Міне сол кезде: -Ааа! солай екен ғой. - деп айтатындарыңа сенімдімін.</p>
+<blockquote>
+<p>Көз қорқақ, қол батыр</p>
+</blockquote>
+<p>Elm тілінде деректер типі ешқашан өзгермейді. Javascript тілінде бұл қағида жартылай ғана дұрыс. Қарапайым типтер number, string өзгерілмейтін типтер болса, объект және массив типтері өзгеріске ұшырайды.</p>
+<pre><code class="Javascript">let str = &#39;testing&#39;;
+str.toUpperCase(); //TESTING қайтарады
+str; //testing қайтарады, яғни өзгермеді
+let obj = {a: &#39;testing&#39;, b: 32};
+obj.b = 10;
+obj; // {a: &#39;testing&#39;, b: 10}; қайтарады. Яғни өзгеріске ұшырайды
+</code></pre>
+<p>Бұл ерекшелікке кейін ораламыз. Ал қазір <strong>immutability</strong> - деректердің өзгермеуі екенін есте сақтасаңдар болды.</p>
+<p><strong><em>Pure function</em></strong> - дегеніміз өзінің аргументтерімен ғана есептеу жүргізетін функцияларды айтады. Мысалы:</p>
+<pre><code class="javascript">// pure - таза функция
+function Pure(a, b) { //a және b аргументтері
+  return a + b;
+}
+let c = 0;
+// impure - таза емес фунция,
+function Impure(a, b) {
+  return a + c; // cебебі c левый мұнда
+}
+</code></pre>
+<h3 id="Reduxтің-үш-басты-терминдері"><a href="#Reduxтің-үш-басты-терминдері" class="headerlink" title="Reduxтің үш басты терминдері"></a>Reduxтің үш басты терминдері</h3><p>Ол - <strong>action</strong>, <strong>reducer</strong> және <strong>store</strong> деп аталады.</p>
+<p><em>Action</em> - қандай өзгеріс туындағанын сипаттайды. Қазақ тілде - оқиға.</p>
+<p><em>Reducer</em> - бұл pure function. Action мен ескі state-ті аргумент ретінде қабылдап, жаңа state қайтарады.Естеріңде болсын, бұл жерде маңызды акцент  <strong>ЖАҢА</strong> деген сөз.Яғни immutability заңдылығына бағыну.Соңғысы ол тек өз аргументерінен алынған деректерді ғана қолдана алады(Pure function).</p>
+<p><em>Store</em> - Бұл бағдарламаңыздың модельі. Қарапайым тілмен айтқанда. Белгілі бір оқиғадан кейінгі, бүкіл бағдарламаның жағдайы немесе көрінісі, ағылшынша - state. Мысалы: меню компонентінде жаңа пункт қосылса,алынып тасталса, өзгертілсе бұл менюдың жаңа көрінісі болып есептелінеді.</p>
+<p>Ал енді толығырақ.<br>Бірінші actionнан бастайық. Бұл  төмендегі сигнатурасы бар қарапайым объект.</p>
+<pre><code class="javascript">{ type: &#39;INCREMENT&#39; }
+</code></pre>
+<p> Бұл жерде type міндетті түрде тұру қажет кілт(key) және оның мәні action-ның аты болып есептелінеді. Ал қалған кілттер қажеттілігене байланысты қосылу мүмкін.</p>
+<p>Сонымен не үшін action қажет? Жауабы: ол store-ды өзгерту үшін маңызды, себебі  store read-only(одан тек ақпарат алуға болады, бірақ оған тікелей жазу мүмкін емес.) Дегенмен ол store-ды өзі жалғыз өзгерте алмайды. Оған көмектесетін reducer. Ол action ның type-ына қарап, store-ды өзгертеді. Ой өтірік айтам, reducer immutability заңына бағынады ғой, яғни state-ты өзгерте алмайды,ол ескі state-ті көшіріп жаңасын қайтарады.<br>Мысалы:</p>
+<pre><code class="javascript">function reducer(state=[], action) {
+  switch(action.type) {
+    case &#39;CREATEITEM&#39;:
+      return [
+        ...state, // бұл spread operator, соның көмегімен ол ескі state-ті кілттерін көшіріп алады
+        {item: &#39;testing&#39;}
+      ];
+    default:
+      return state;
+  }
+}
+</code></pre>
+<p>Одан кейін store жаңартылады, react store өзгергенін сезіп, қайтадан рендеринг жасайды.</p>
+<h3 id="Ақымақ-және-ақылды-компоненттер-Components-and-Containers"><a href="#Ақымақ-және-ақылды-компоненттер-Components-and-Containers" class="headerlink" title="Ақымақ және ақылды компоненттер(Components and Containers)"></a>Ақымақ және ақылды компоненттер(Components and Containers)</h3><p>Ақымақ компонент - деген reactтің қарапайым компонентері, олар redux жайлы ештеңе білмейді. Оларға тек өздеріне келген деректерді рендеринг жасаудан басқа міндеттемелер жоқ.<br>Ақылды компоненттер керісінше react-redux атты қосымшамен тығыз байланысты. Оларды connect декоратор функциясы арқылы жасалынады.</p>
+<pre><code class="javascript">const mapStateToProps = (state) =&gt; {
+  return {// TodoList компонентке props.todos-қа binding жасайды
+    todos: getVisibleTodos(state.todos, state.visibilityFilter)
+  }
+}
+const mapDispatchToProps = (dispatch) =&gt; {
+  return {// Todolist компонентке props.onTodoClick оқиғасын binding жасайды
+    onTodoClick: (id) =&gt; {
+      dispatch(toggleTodo(id)) // toggleTodo action-ын шақырады
+    }
+  }
+}
+// VisibleTodoList - ақылды компонент
+const VisibleTodoList = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TodoList) // TodoList - ақымық компонент
+</code></pre>
+<h3 id="Provider-createStore-combineReducers"><a href="#Provider-createStore-combineReducers" class="headerlink" title="Provider, createStore, combineReducers,"></a>Provider, createStore, combineReducers,</h3><p><em>СombineReducers</em> - бірнеше reducer-ларды біріктіреді.</p>
+<pre><code class="javascript">cosnt reducers = combineReducers(reducer1, reducer2)
+</code></pre>
+<p><em>СreateStore</em> - Бұл функция өзіне  бірінші аргумент ретінде редюсерларды қабылдап, store қайтарады.</p>
+<pre><code class="javascript">const store = createStore(reducers);
+</code></pre>
+<p><em>Provider</em> - өзінен төменгі компоненттерге store-дағы ақпаратты тікелей алуға көмектеседі.</p>
+<pre><code class="javascript">render(&lt;Provider store={store}&gt;
+  &lt;App /&gt;
+&lt;/Provider&gt;, document.getElementById(&#39;root&#39;))
+</code></pre>
+<p>Соңына да жеттік әйтеуір. Мынау pen-де айтылған барлық код жатыр. Уақыттың аздығына байланысты, мен бұл кодты интернеттен көшіріп жазып алдым. Шыныменде маған осы мақаланы жазу үшін бірталай уақыт өтті. </p>
+<p></p><p data-height="265" data-theme-id="light" data-slug-hash="oBXxYJ" data-default-tab="result" data-user="Khangeldy" data-embed-version="2" data-pen-title="for my blog" class="codepen">See the Pen <a href="http://codepen.io/Khangeldy/pen/oBXxYJ/" target="_blank" rel="external">for my blog</a> by Khangeldy (<a href="http://codepen.io/Khangeldy" target="_blank" rel="external">@Khangeldy</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+	</div>
+	<div class="meta split">
+		<time class="post-date" datetime="2017-01-05T07:58:37.000Z" itemprop="datePublished">2017-01-05</time>
+	</div>
+</article>
+
+<!--评论-->
+
+	<div id="disqus_thread"></div>
+<script type='text/javascript'>
+    /**
+    * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '//khangeldy-blog.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>
+    Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+
+
+
+  
+</div>
+
+
+  <svg id="bigTriangleColor" width="100%" height="40" viewBox="0 0 100 102" preserveAspectRatio="none">
+    <path d="M0 0 L50 100 L100 0 Z"></path>
+  </svg>
+
+  
+
+
+  <div class="wrapper"></div>
+
+
+<div class="fat-footer">
+	<div class="wrapper">
+		<div class="layout layout--center">
+			<div class="layout__item palm-mb">
+				<div class="media">
+					<img class="headimg" src='/blog/images/ava2.jpg' alt='Khangeldy Ilebaev'>
+					<div class="media__body">
+						<h4>Khangeldy</h4>
+						<p class='site-description'>Менің мағынасы жоқ шимайларым. Бұл жерде мен өзімнің жазушылық шеберлігімді шыңдаймын</p>
+					</div>
+				</div>
+				<div class="author-contact">
+					<ul>
+						
+							
+							<li>
+				        		<a href="http://vk.com/mahabatuly" target="_blank">
+				        			
+				        				<i class="icon khan-vk"></i>
+				        			
+				        		</a>
+				        	</li>
+						
+							
+							<li>
+				        		<a href="https://github.com/khangeldy" target="_blank">
+				        			
+				        				<i class="icon khan-iconfont"></i>
+				        			
+				        		</a>
+				        	</li>
+						
+							
+							<li>
+				        		<a href="http://codepen.io/Khangeldy" target="_blank">
+				        			
+				        				<i class="icon khan-codepen"></i>
+				        			
+				        		</a>
+				        	</li>
+						
+							
+							<li>
+				        		<a href="https://www.instagram.com/khanemeswolf" target="_blank">
+				        			
+												<i class="icon khan-instagram"></i>
+											
+				        		</a>
+				        	</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<footer class="footer" role="contentinfo">
+	<div class="wrapper wrapper--wide split split--responsive">
+		<span>Theme by <a href="http://github.com/yumemor">Yumemor</a>. Powered by <a href="http://hexo.io">Hexo</a></span>
+	</div>
+</footer>
+
+	<!-－这里导入了 lib.js 里面涵盖了 jQuery 等框架 所以注释掉-->
+	<!--<script src="http://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>-->
+	<script src="/blog/js/lib.js"></script>
+	<script src="/blog/js/google-code-prettify/prettify.js"></script>
+	<script src="/blog/js/module.js"></script>
+	<script src="/blog/js/script.js"></script>
+	<script type='text/javascript'>
+		//代码高亮
+		$(document).ready(function(){
+	 		$('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+   			prettyPrint();
+		});
+	</script>
+	</body>
+</html>
