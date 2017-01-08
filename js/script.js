@@ -26,7 +26,7 @@
 
             $('.js-search .text-input').keydown(function (event) {
                 if (event.keyCode == 13) {
-                    location.href = 'https://www.google.com/search?q=site:khangeldy.github.com/blog ' + $(this).val();
+                    location.href = 'https://www.google.com/search?q=site:https://khangeldy.github.com/blog ' + $(this).val();
                     return false;
                 }
             })
