@@ -89,7 +89,7 @@
         var bannerNode = $('.top-image');
         if(bannerNode.data('enable')){
             var index = parseInt((Math.random() * 21) + 1);
-            bannerNode.attr('style','background-image:url(/blog/banner/'+index+'.jpg)');
+            bannerNode.attr('style','background-image: url(/blog/banner/'+index+'.jpg)');
         }
     })
 
