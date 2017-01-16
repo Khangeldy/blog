@@ -484,6 +484,7 @@ header.scrolled #nav-toggle {
   width: 100%;
   padding-bottom: 550px;
   background: center center/cover no-repeat;
+  background: #ff0;
 }
 .m-header #wave-canvas {
   position: absolute;
